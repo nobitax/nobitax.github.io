@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ÔN TẬP KỲ THI QUỐC DÂN 2025</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+    :root {
+      --accent: #06b6d4;
+      --text: #0f172a;
+      --muted: #64748b;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      background: linear-gradient(120deg, #dffcff, #ffffff, #b9f6f9);
+      background-size: 300% 300%;
+      animation: gradientMove 12s ease infinite;
+    }
+
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .card {
+      width: 100%;
+      max-width: 520px;
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(10px);
+      padding: 36px;
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(2,6,23,0.1);
+      text-align: center;
+      opacity: 0;
+      transform: translateY(25px);
+      animation: fadeInUp 1.2s ease forwards;
+    }
+
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(25px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    .logo {
+      width: 120px;
+      height: 120px;
+      margin: 0 auto 20px;
+      transform-style: preserve-3d;
+      animation: rotate3D 6s linear infinite;
+    }
+
+    @keyframes rotate3D {
+      from { transform: rotateY(0deg); }
+      to { transform: rotateY(360deg); }
+    }
+
+    h1 {
+      font-size: 28px;
+      margin-bottom: 10px;
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    p.lead {
+      color: var(--muted);
+      margin-bottom: 26px;
+      font-size: 16px;
+    }
+
+    .actions {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    button.btn {
+      display: inline-block;
+      text-decoration: none;
+      color: white;
+      padding: 28px 18px;
+      border-radius: 18px;
+      font-weight: 700;
+      font-size: 22px;
+      transition: all .35s ease;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn.green {
+      background: linear-gradient(90deg, #34d399, #10b981);
+    }
+    .btn.blue {
+      background: linear-gradient(90deg, #60a5fa, #3b82f6);
+    }
+
+    button.btn:hover {
+      transform: scale(1.05);
+      filter: brightness(1.18);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+
+    @media (min-width:540px) {
+      .actions { flex-direction: column; }
+      button.btn { max-width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <div class="card" role="main">
+    <img src="Logo/Logo.webp" alt="Logo" class="logo" />
+    <h1>ÔN TẬP KỲ THI QUỐC DÂN 2025</h1>
+    <p class="lead">Chọn nội dung ôn tập.</p>
+
+    <div class="actions">
+      <button class="btn green" onclick="checkPassword('sgr2025', 'CM/cm.html')">CHUYÊN MÔN</button>
+      <button class="btn blue" onclick="checkPassword('sgr2007', 'VH/vh.html')">VĂN HÓA</button>
+    </div>
+  </div>
+
+  <script>
+    function checkPassword(correctPassword, targetPage) {
+      const input = prompt('Nhập mật khẩu để truy cập:');
+      if (input === correctPassword) {
+        window.location.href = targetPage;
+      } else if (input !== null) {
+        alert('Sai mật khẩu! Vui lòng thử lại.');
+      }
+    }
+  </script>
+</body>
+</html>
