@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KỲ THI QUỐC DÂN 2025</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+    :root {
+      --accent: #06b6d4;
+      --text: #0f172a;
+      --muted: #64748b;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      background: linear-gradient(120deg, #dffcff, #ffffff, #b9f6f9);
+      background-size: 300% 300%;
+      animation: gradientMove 12s ease infinite;
+    }
+
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .card {
+      width: 100%;
+      max-width: 520px;
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(10px);
+      padding: 36px;
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(2,6,23,0.1);
+      text-align: center;
+      opacity: 0;
+      transform: translateY(25px);
+      animation: fadeInUp 1.2s ease forwards;
+    }
+
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(25px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    .logo {
+      width: 120px;
+      height: 120px;
+      margin: 0 auto 20px;
+      transform-style: preserve-3d;
+      animation: rotate3D 6s linear infinite;
+    }
+
+    @keyframes rotate3D {
+      from { transform: rotateY(0deg); }
+      to { transform: rotateY(360deg); }
+    }
+
+    h1 {
+      font-size: 26px;
+      margin-bottom: 10px;
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    p.lead {
+      color: var(--muted);
+      margin-bottom: 26px;
+      font-size: 15px;
+    }
+
+    .actions {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    a.btn {
+      display: inline-block;
+      text-decoration: none;
+      color: white;
+      padding: 18px 18px;
+      border-radius: 14px;
+      font-weight: 700;
+      font-size: 18px;
+      transition: all .35s ease;
+    }
+
+    a.btn.green {
+      background: linear-gradient(90deg, #34d399, #10b981);
+    }
+    a.btn.blue {
+      background: linear-gradient(90deg, #60a5fa, #3b82f6);
+    }
+    a.btn.orange {
+      background: linear-gradient(90deg, #fbbf24, #f59e0b);
+    }    
+    a.btn:hover {
+      transform: scale(1.05);
+      filter: brightness(1.18);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+
+    @media (min-width:540px) {
+      .actions { flex-direction: column; }
+      a.btn { max-width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <div class="card" role="main">
+    <img src="Logo/Logo.webp" alt="Logo" class="logo" />
+    <h1>KỲ THI QUỐC DÂN 2025</h1>
+    <p class="lead">Chọn nội dung ôn luyện chuyên đề.</p>
+
+    <div class="actions" role="group" aria-label="Chọn ôn tập">
+      <a class="btn green" href="CMGS/index.html" role="button">CHUYÊN MÔN GIÁM SÁT</a>
+      <a class="btn blue" href="PLC/index.html" role="button">CÂU HỎI PHÁP LUẬT CHUNG</a>
+      <a class="btn orange" href="PLR/index.html" role="button">CÂU HỎI PHÁP LUẬT RIÊNG</a>     
+    </div>
+  </div>
+</body>
+</html>
