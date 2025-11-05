@@ -83,6 +83,7 @@
       display: flex;
       flex-direction: column;
       gap: 20px;
+      align-items: center;
     }
 
     button.btn {
@@ -96,14 +97,12 @@
       transition: all .35s ease;
       border: none;
       cursor: pointer;
+      width: 100%;
     }
 
-    .btn.green {
-      background: linear-gradient(90deg, #34d399, #10b981);
-    }
-    .btn.blue {
-      background: linear-gradient(90deg, #60a5fa, #3b82f6);
-    }
+    .btn.green { background: linear-gradient(90deg, #34d399, #10b981); }
+    .btn.blue { background: linear-gradient(90deg, #60a5fa, #3b82f6); }
+    .btn.orange { background: linear-gradient(90deg, #fcd34d, #fbbf24); color: white; }
 
     button.btn:hover {
       transform: scale(1.05);
@@ -113,7 +112,6 @@
 
     @media (min-width:540px) {
       .actions { flex-direction: column; }
-      button.btn { max-width: 100%; }
     }
   </style>
 </head>
@@ -124,8 +122,9 @@
     <p class="lead">Chọn nội dung ôn tập.</p>
 
     <div class="actions">
-      <button class="btn green" onclick="checkPassword('Sgr2025', 'CM/cm.html')">CHUYÊN MÔN</button>
-      <button class="btn blue" onclick="checkPassword('Sgr2007', 'VH/vh.html')">VĂN HÓA</button>
+      <button class="btn green" onclick="checkPassword('Ssgr2007', 'CM/cm.html')">CHUYÊN MÔN</button>
+      <button class="btn blue" onclick="checkPassword('Sgr2025', 'VH/vh.html')">VĂN HÓA</button>
+      <button class="btn orange" onclick="checkPassword('Sgr1998', 'old/old.html')">2024</button>
     </div>
   </div>
 
@@ -141,4 +140,3 @@
   </script>
 </body>
 </html>
-
