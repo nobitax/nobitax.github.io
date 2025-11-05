@@ -66,6 +66,52 @@
       to { transform: rotateY(360deg); }
     }
 
+    h1 {
+      font-size: 28px;
+      margin-bottom: 10px;
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    p.lead {
+      color: var(--muted);
+      margin-bottom: 26px;
+      font-size: 16px;
+    }
+
+    .actions {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      align-items: center;
+    }
+
+    button.btn {
+      display: inline-block;
+      text-decoration: none;
+      color: white;
+      padding: 22px 18px; /* giảm chiều cao khoảng 20% */
+      border-radius: 18px;
+      font-weight: 700;
+      font-size: 20px;
+      transition: all .35s ease;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    /* Chuyên môn và Giám sát cùng màu xanh */
+    .btn.green { background: linear-gradient(90deg, #34d399, #10b981); }
+
+    .btn.blue { background: linear-gradient(90deg, #60a5fa, #3b82f6); }
+    .btn.orange { background: linear-gradient(90deg, #fcd34d, #fbbf24); color: white; }
+
+    button.btn:hover {
+      transform: scale(1.05);
+      filter: brightness(1.18);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+
     .donate {
       margin-top: 28px;
       font-size: 15px;
@@ -83,50 +129,6 @@
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
 
-    h1 {
-      font-size: 28px;
-      margin-bottom: 10px;
-      color: var(--accent);
-      font-weight: 700;
-    }
-
-    p.lead {
-      color: var(--muted);
-      margin-bottom: 26px;
-      font-size: 16px;
-    }
-
-    .actions {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      align-items: center;
-    }
-
-    button.btn {
-      display: inline-block;
-      text-decoration: none;
-      color: white;
-      padding: 28px 18px;
-      border-radius: 18px;
-      font-weight: 700;
-      font-size: 22px;
-      transition: all .35s ease;
-      border: none;
-      cursor: pointer;
-      width: 100%;
-    }
-
-    .btn.green { background: linear-gradient(90deg, #34d399, #10b981); }
-    .btn.blue { background: linear-gradient(90deg, #60a5fa, #3b82f6); }
-    .btn.orange { background: linear-gradient(90deg, #fcd34d, #fbbf24); color: white; }
-
-    button.btn:hover {
-      transform: scale(1.05);
-      filter: brightness(1.18);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-    }
-
     @media (min-width:540px) {
       .actions { flex-direction: column; }
     }
@@ -139,14 +141,15 @@
     <p class="lead">Chọn nội dung ôn tập.</p>
 
     <div class="actions">
-      <button class="btn green" onclick="checkPassword('Sgr2025', 'CM/cm.html')">CHUYÊN MÔN</button>
-      <button class="btn blue" onclick="checkPassword('Sgr2007', 'VH/vh.html')">VĂN HÓA</button>
-      <button class="btn orange" onclick="checkPassword('Sgr1998', 'old/old.html')">2024</button>
+      <button class="btn green" onclick="checkPassword('Sgr2007', 'CM/cm.html')">CHUYÊN MÔN QL CHI PHÍ</button>
+      <button class="btn green" onclick="checkPassword('Sgr_gs', 'CMGS/gs.html')">CHUYÊN MÔN GIÁM SÁT</button>
+      <button class="btn blue" onclick="checkPassword('Sgr2025', 'VH/vh.html')">VĂN HÓA</button>
+      <button class="btn orange" onclick="checkPassword('Sgr1998', 'old/index_old.html')">2024</button>
     </div>
 
     <div class="donate">
-      Nếu thấy hữu ích A/C có thể ủng hộ ^^:<br>
-      <strong>Nội dung: Ten_SUNGROUP_UH</strong>
+      Nếu hữu ích bạn có thể ủng hộ theo cú pháp:<br>
+      <strong>Donvi_Sungroup_UH ^^</strong>
       <img src="Logo/MTTQ.png" alt="Ủng hộ MTTQ" />
     </div>
   </div>
@@ -163,5 +166,3 @@
   </script>
 </body>
 </html>
-
-
