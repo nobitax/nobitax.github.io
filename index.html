@@ -141,20 +141,31 @@
     <p class="lead">Chọn nội dung ôn tập.</p>
 
     <div class="actions">
-      <button class="btn green" onclick="checkPassword('Sgr2025', 'CM/cm.html')">CHUYÊN MÔN QL CHI PHÍ</button>
+      <button class="btn green" onclick="checkPasswordCM()">CHUYÊN MÔN QL CHI PHÍ</button>
       <button class="btn green" onclick="checkPassword('Sgr_gs', 'CMGS/gs.html')">CHUYÊN MÔN GIÁM SÁT</button>
       <button class="btn blue" onclick="checkPassword('Sgr2007', 'VH/vh.html')">VĂN HÓA</button>
       <button class="btn orange" onclick="checkPassword('Sgr1998', 'old/old.html')">2024</button>
     </div>
 
     <div class="donate">
-      Nếu thấy hữu ích a/c có thể "đồ nết" ^_^ theo cú pháp:<br>
+      Nếu hữu ích a/c có thể "đồ nớt" ^_^ theo cú pháp:<br>
       <strong>❤️ Ten_Sungroup_UH ❤️</strong>
       <img src="Logo/MTTQ.png" alt="Ủng hộ MTTQ" />
     </div>
   </div>
 
   <script>
+    function checkPasswordCM() {
+      const input = prompt('Nhập mật khẩu để truy cập:');
+      if (input === 'Sgr2025') {
+        window.location.href = 'CM/cm.html';
+      } else if (input === 'Sgr_acecp') {
+        window.location.href = 'DTXDprv/index.html';
+      } else if (input !== null) {
+        alert('Sai mật khẩu! Vui lòng thử lại.');
+      }
+    }
+
     function checkPassword(correctPassword, targetPage) {
       const input = prompt('Nhập mật khẩu để truy cập:');
       if (input === correctPassword) {
@@ -166,9 +177,3 @@
   </script>
 </body>
 </html>
-
-
-
-
-
-
