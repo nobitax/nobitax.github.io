@@ -90,7 +90,7 @@
       display: inline-block;
       text-decoration: none;
       color: white;
-      padding: 22px 18px; /* giảm chiều cao khoảng 20% */
+      padding: 22px 18px;
       border-radius: 18px;
       font-weight: 700;
       font-size: 20px;
@@ -100,11 +100,10 @@
       width: 100%;
     }
 
-    /* Chuyên môn và Giám sát cùng màu xanh */
     .btn.green { background: linear-gradient(90deg, #34d399, #10b981); }
-
     .btn.blue { background: linear-gradient(90deg, #60a5fa, #3b82f6); }
     .btn.orange { background: linear-gradient(90deg, #fcd34d, #fbbf24); color: white; }
+    .btn.gold { background: linear-gradient(90deg, #fcd34d, #fde68a); color: #4b3900; }
 
     button.btn:hover {
       transform: scale(1.05);
@@ -143,6 +142,7 @@
     <div class="actions">
       <button class="btn green" onclick="checkPasswordCM()">CHUYÊN MÔN QL CHI PHÍ</button>
       <button class="btn green" onclick="checkPassword('Sgr_gs', 'CMGS/gs.html')">CHUYÊN MÔN GIÁM SÁT</button>
+      <button class="btn gold" onclick="window.location.href='CMHC/index.html'">CHUYÊN MÔN HÀNH CHÍNH</button>
       <button class="btn blue" onclick="checkPassword('Sgr2007', 'VH/vh.html')">VĂN HÓA</button>
       <button class="btn orange" onclick="checkPassword('Sgr1998', 'old/old.html')">2024</button>
     </div>
@@ -160,7 +160,7 @@
       if (input === 'Sgr2025') {
         window.location.href = 'CM/cm.html';
       } else if (input === 'Sgr_acecp') {
-        window.location.href = 'DTXD_/index.html';
+        window.location.href = 'DTXDprv/index.html';
       } else if (input !== null) {
         alert('Sai mật khẩu! Vui lòng thử lại.');
       }
@@ -177,5 +177,3 @@
   </script>
 </body>
 </html>
-
-
