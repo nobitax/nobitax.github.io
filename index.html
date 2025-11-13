@@ -86,7 +86,7 @@
       align-items: center;
     }
 
-    a.btn, button.btn {
+    a.btn {
       display: inline-block;
       text-decoration: none;
       color: white;
@@ -97,8 +97,6 @@
       transition: all .35s ease;
       width: 100%;
       text-align: center;
-      border: none;
-      cursor: pointer;
     }
 
     .btn.green { background: linear-gradient(90deg, #34d399, #10b981); }
@@ -106,7 +104,7 @@
     .btn.orange { background: linear-gradient(90deg, #fcd34d, #fbbf24); color: white; }
     .btn.gold { background: linear-gradient(90deg, #fcd34d, #fde68a); color: #4b3900; }
 
-    a.btn:hover, button.btn:hover {
+    a.btn:hover {
       transform: scale(1.05);
       filter: brightness(1.18);
       box-shadow: 0 10px 25px rgba(0,0,0,0.15);
@@ -141,7 +139,7 @@
     <p class="lead">Chọn nội dung ôn tập.</p>
 
     <div class="actions">
-      <button class="btn green" onclick="checkPasswordCM()">CHUYÊN MÔN QL CHI PHÍ (Pass: 2025)</button>
+      <a class="btn green" href="CM/cm.html">CHUYÊN MÔN QL CHI PHÍ</a>
       <a class="btn green" href="CMGS/gs.html">CHUYÊN MÔN GIÁM SÁT</a>
       <a class="btn gold" href="CMHC/index.html">CHUYÊN MÔN HÀNH CHÍNH</a>
       <a class="btn gold" href="CMDT/index.html">CHUYÊN MÔN ĐÀO TẠO</a>
@@ -155,18 +153,5 @@
       <img src="Logo/MTTQ.png" alt="Ủng hộ MTTQ" />
     </div>
   </div>
-
-  <script>
-    function checkPasswordCM() {
-      const input = prompt('Nhập mật khẩu để truy cập:');
-      if (input === '2025') {
-        window.location.href = 'CM/cm.html';
-      } else if (input === 'cp2025') {
-        window.location.href = 'DTXD_/index.html';
-      } else if (input !== null) {
-        alert('Sai mật khẩu! Vui lòng thử lại.');
-      }
-    }
-  </script>
 </body>
 </html>
