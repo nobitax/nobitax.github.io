@@ -86,7 +86,7 @@
       align-items: center;
     }
 
-    button.btn {
+    a.btn, button.btn {
       display: inline-block;
       text-decoration: none;
       color: white;
@@ -95,9 +95,10 @@
       font-weight: 700;
       font-size: 20px;
       transition: all .35s ease;
+      width: 100%;
+      text-align: center;
       border: none;
       cursor: pointer;
-      width: 100%;
     }
 
     .btn.green { background: linear-gradient(90deg, #34d399, #10b981); }
@@ -105,7 +106,7 @@
     .btn.orange { background: linear-gradient(90deg, #fcd34d, #fbbf24); color: white; }
     .btn.gold { background: linear-gradient(90deg, #fcd34d, #fde68a); color: #4b3900; }
 
-    button.btn:hover {
+    a.btn:hover, button.btn:hover {
       transform: scale(1.05);
       filter: brightness(1.18);
       box-shadow: 0 10px 25px rgba(0,0,0,0.15);
@@ -140,11 +141,12 @@
     <p class="lead">Chọn nội dung ôn tập.</p>
 
     <div class="actions">
-      <button class="btn green" onclick="checkPasswordCM()">CHUYÊN MÔN QL CHI PHÍ</button>
-      <button class="btn green" onclick="checkPassword('Sgr_gs', 'CMGS/gs.html')">CHUYÊN MÔN GIÁM SÁT</button>
-      <button class="btn gold" onclick="window.location.href='CMHC/index.html'">CHUYÊN MÔN HÀNH CHÍNH</button>
-      <button class="btn blue" onclick="checkPassword('Sgr2007', 'VH/vh.html')">VĂN HÓA</button>
-      <button class="btn orange" onclick="checkPassword('Sgr1998', 'old/old.html')">2024</button>
+      <button class="btn green" onclick="checkPasswordCM()">CHUYÊN MÔN QL CHI PHÍ (Pass: 2025)</button>
+      <a class="btn green" href="CMGS/gs.html">CHUYÊN MÔN GIÁM SÁT</a>
+      <a class="btn gold" href="CMHC/index.html">CHUYÊN MÔN HÀNH CHÍNH</a>
+      <a class="btn gold" href="CMDT/index.html">CHUYÊN MÔN ĐÀO TẠO</a>
+      <a class="btn blue" href="VH/vh.html">VĂN HÓA</a>
+      <a class="btn orange" href="old/old.html">2024</a>
     </div>
 
     <div class="donate">
@@ -157,19 +159,10 @@
   <script>
     function checkPasswordCM() {
       const input = prompt('Nhập mật khẩu để truy cập:');
-      if (input === 'Sgr2025') {
+      if (input === '2025') {
         window.location.href = 'CM/cm.html';
-      } else if (input === 'Sgr_acecp') {
-        window.location.href = 'DTXDprv/index.html';
-      } else if (input !== null) {
-        alert('Sai mật khẩu! Vui lòng thử lại.');
-      }
-    }
-
-    function checkPassword(correctPassword, targetPage) {
-      const input = prompt('Nhập mật khẩu để truy cập:');
-      if (input === correctPassword) {
-        window.location.href = targetPage;
+      } else if (input === 'cp2025') {
+        window.location.href = 'DTXD_/index.html';
       } else if (input !== null) {
         alert('Sai mật khẩu! Vui lòng thử lại.');
       }
